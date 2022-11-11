@@ -53,25 +53,14 @@ export default function App() {
           setImages(images.concat(hits));
           setLoader(false);
           setLoadMore(true);
-          // this.setState({
-          //   images: images.concat(hits),
-          //   loader: false,
-          //   loadMore: true,
-          // });
+
           if (page >= Math.ceil(totalHits / perPage)) {
             setLoadMore(false);
-            // this.setState({
-            //   loadMore: false,
-            // });
             toast.info('It is the last page of images');
           }
         } catch (error) {
           setError(error);
           setLoader(false);
-          // this.setState({
-          //   error,
-          //   loader: false,
-          // })
         }
       }
       fetchData();
@@ -82,26 +71,20 @@ export default function App() {
     setImages([]);
     setSearch(data);
     setPage(1);
-    // this.setState({ images: [], search: data, page: 1 });
   };
 
   const toggleModal = () => {
     setShowModal(showModal => !showModal);
-    // this.setState(({ showModal }) => ({
-    //   showModal: !showModal,
-    // }));
   };
 
   const handleImgClick = largeImg => {
     setModalImg(largeImg);
 
     setShowModal(true);
-    // this.setState({ modalImg: largeImg, showModal: true });
   };
 
   const loadMoreBtn = () => {
     setPage(page + 1);
-    // this.setState({ page: this.state.page + 1 });
   };
 
   return (
