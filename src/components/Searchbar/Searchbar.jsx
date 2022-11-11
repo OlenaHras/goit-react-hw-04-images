@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { FcSearch } from 'react-icons/fc';
 import {
   Searchbar,
@@ -38,3 +39,7 @@ export default function SearchBar({ onSubmit }) {
     </Searchbar>
   );
 }
+
+SearchBar.propTypes = {
+  value: PropTypes.string,
+};

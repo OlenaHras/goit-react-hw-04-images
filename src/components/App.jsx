@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -107,3 +108,14 @@ export default function App() {
     </AppContainer>
   );
 }
+
+App.propTypes = {
+  images: PropTypes.array,
+  search: PropTypes.string,
+  page: PropTypes.number,
+  loader: PropTypes.bool,
+  loadMore: PropTypes.bool,
+  error: PropTypes.string,
+  showModal: PropTypes.bool,
+  modalImg: PropTypes.string,
+};
