@@ -18,7 +18,7 @@ export default function Modal({ onCloseWindow, children }) {
       onCloseWindow();
     }
   };
-  console.log(children);
+
   const handleBackdropClick = e => {
     if (e.currentTarget === e.target) {
       onCloseWindow();
