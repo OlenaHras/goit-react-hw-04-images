@@ -32,32 +32,3 @@ export default function Modal({ onCloseWindow, children }) {
     modalRoot
   );
 }
-
-// export class Modal extends Component {
-//   componentDidMount() {
-//     window.addEventListener('keydown', this.handleKeyDown);
-//   }
-//   componentWillUnmount() {
-//     window.removeEventListener('keydown', this.handleKeyDown);
-//   }
-
-//   handleKeyDown = e => {
-//     if (e.code === 'Escape') {
-//       this.props.onCloseWindow();
-//     }
-//   };
-
-//   handleBackdropClick = e => {
-//     if (e.currentTarget === e.target) {
-//       this.props.onCloseWindow();
-//     }
-//   };
-//   render() {
-//     // return createPortal(
-//     //   <Overlay onClick={this.handleBackdropClick}>
-//     //     <ModalCont>{this.props.children}</ModalCont>
-//     //   </Overlay>,
-//     //   modalRoot
-//     // );
-//   }
-// }
